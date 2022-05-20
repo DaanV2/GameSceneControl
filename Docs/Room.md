@@ -1,3 +1,0 @@
-# Room
-
-- [Room](#room)
