@@ -9,6 +9,13 @@
     <Import_RootNamespace>GameSceneControl</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Classes\Room\" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\TimeOfDayValue\TimeOfDayValue - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\TimeOfDayValue\TimeOfDayValue - Properties.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\TimeOfDayValue\TimeOfDayValue - Variables.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IIdentifiable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\DataStorage\DataStorage - Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\DataStorage\DataStorage - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\DataStorage\DataStorage - Get Set.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\DataStorage\DataStorage - Properties.cs" />
   </ItemGroup>
 </Project>

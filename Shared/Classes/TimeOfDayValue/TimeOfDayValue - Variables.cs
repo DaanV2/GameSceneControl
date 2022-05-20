@@ -4,10 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameSceneControl.Classes
-{
-    public partial class Room
-    {
-        //DOLATER add variables to class Room
+namespace GameSceneControl {
+    public partial class TimeOfDayValue {
+        //DOLATER add variables to class TimeOfDayValue
     }
 }

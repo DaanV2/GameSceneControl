@@ -1,11 +1,12 @@
-﻿namespace GameScenceControl;
+﻿using GameSceneControl;
 
-public partial class App : Application
-{
-	public App()
-	{
-		InitializeComponent();
+namespace GameScenceControl;
 
-		MainPage = new AppShell();
-	}
+public partial class App : Application {
+    public App() {
+        InitializeComponent();
+
+        DataStorage.Initialize();
+        MainPage = new AppShell();
+    }
 }
