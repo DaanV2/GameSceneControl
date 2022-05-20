@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameScenceControl", "GameScenceControl\GameScenceControl.csproj", "{2408E308-9709-417A-A059-FE02EAC0BA29}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared", "Shared\Shared.shproj", "{C34FEF6B-38C0-4AA4-9FF5-FAACC132EBC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,5 +25,9 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Shared\Shared.projitems*{2408e308-9709-417a-a059-fe02eac0ba29}*SharedItemsImports = 5
+		Shared\Shared.projitems*{c34fef6b-38c0-4aa4-9ff5-faacc132ebc6}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
