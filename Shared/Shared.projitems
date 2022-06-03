@@ -13,7 +13,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Classes\TimeOfDayValue\TimeOfDayValue - Properties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\TimeOfDayValue\TimeOfDayValue - Variables.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IIdentifiable.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\Area\Area.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\Area\Area - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\Area\Area - Properties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\Lamp\Lamp - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\Lamp\Lamp - Properties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\Lamp\Lamp - Variables.cs" />
@@ -21,6 +22,18 @@
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\Room\Room - Properties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\Room\Room - Variables.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Enumerators\AreaType\AreaType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Serialization\Classes\ActuatorData\ActuatorData - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Serialization\Classes\ActuatorData\ActuatorData - Properties.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Serialization\Classes\ActuatorData\ActuatorData - Casting.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Serialization\Classes\ActuatorData\ActuatorData - Variables.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Serialization\Classes\RoomData\RoomData - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Serialization\Classes\RoomData\RoomData - Casting.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Serialization\Classes\RoomData\RoomData - Properties.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Serialization\Classes\RoomData\RoomData - Variables.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Serialization\Classes\ServiceData\ServiceData - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Serialization\Classes\ServiceData\ServiceData - Properties.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Serialization\Classes\ServiceData\ServiceData - Casting.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Serialization\Classes\ServiceData\ServiceData - Variables.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Enumerators\ActuatorType\ActuatorType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Interfaces\IActuator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Interfaces\IActuatorLight.cs" />
@@ -28,13 +41,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\Interfaces\IParentService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Interfaces\IService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Static Classes\ServiceExtension\GetActuator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Static Classes\ServiceFactory\ServiceFactory - Propeties.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Static Classes\ServiceFactory\ServiceFactory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\DataStorage\DataStorage - Info.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\DataStorage\DataStorage - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\DataStorage\DataStorage - Get Set.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\DataStorage\DataStorage - Properties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\IdentifiableExtension\ByID.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Rooms\Serialization\" />
   </ItemGroup>
 </Project>

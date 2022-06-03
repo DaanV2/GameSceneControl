@@ -10,10 +10,5 @@ namespace GameSceneControl.Services {
     public interface IActuator : IClosable, IParentService, IIdentifiable {
         /// <summary></summary>
         public ActuatorType ActuatorType { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public Area Area { get; }
     }
 }

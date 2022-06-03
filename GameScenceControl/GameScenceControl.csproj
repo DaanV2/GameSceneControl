@@ -66,4 +66,6 @@
 
 	<Import Project="..\Shared\Shared.projitems" Label="Shared" />
 
+	<Import Project="..\Services\PhillipsHue\PhillipsHue.projitems" Label="Shared" />
+
 </Project>
