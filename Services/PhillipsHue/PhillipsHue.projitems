@@ -10,6 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Classes\PhillipsHueService\PhillipsHueService - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\PhillipsHueService\PhillipsHueService - IService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\PhillipsHueService\PhillipsHueService - Properties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\PhillipsHueService\PhillipsHueService - Create.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\PhillipsHueService\PhillipsHueService - Variables.cs" />
