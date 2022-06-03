@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>c14f5ca3-ea09-4d32-a4db-91ca94c1e244</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>GameSceneControl.Hue</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\PhillipsHueService\PhillipsHueService - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\PhillipsHueService\PhillipsHueService - Properties.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\PhillipsHueService\PhillipsHueService - Create.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\PhillipsHueService\PhillipsHueService - Variables.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PhillipsHue.cs" />
+  </ItemGroup>
+</Project>
