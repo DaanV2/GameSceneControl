@@ -10,12 +10,12 @@ namespace GameSceneControl.Rooms.Serialization {
         /// <summary>
         /// 
         /// </summary>
-        public Guid ID { get; set; }
+        public String ID { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        public Guid ServiceID { get; set; }
+        public String ServiceID { get; set; }
 
         /// <summary>
         /// 
