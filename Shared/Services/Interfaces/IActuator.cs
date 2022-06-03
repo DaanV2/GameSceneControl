@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameSceneControl.Rooms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,5 +10,10 @@ namespace GameSceneControl.Services {
     public interface IActuator : IClosable, IParentService, IIdentifiable {
         /// <summary></summary>
         public ActuatorType ActuatorType { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Area Area { get; }
     }
 }

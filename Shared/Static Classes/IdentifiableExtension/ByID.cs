@@ -1,4 +1,5 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Runtime.CompilerServices;
 
 namespace GameSceneControl {
     ///DOLATER <summary>add description for class: IdentifiableExtension</summary>
@@ -11,10 +12,10 @@ namespace GameSceneControl {
         /// <param name="ID"></param>
         /// <returns></returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-        public static T ById<T>(this ICollection<T> items, Guid ID)
+        public static T ById<T>([DisallowNull] this ICollection<T> items, [DisallowNull] String ID)
             where T : class, IIdentifiable {
 
-            foreach (var item in items) {
+            foreach (T item in items) {
                 if (item.ID == ID) return item;
             }
 
