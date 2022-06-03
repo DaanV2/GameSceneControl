@@ -17,6 +17,8 @@
         /// <param name="Folder">The folder to start the search from</param>
         /// <returns>An array of files</returns>
         private static String[] InternalGetFiles(String Folder) {
+            Directory.CreateDirectory(Folder);
+
             return Directory.GetFiles(Folder, "*", SearchOption.AllDirectories);
         }
 
@@ -35,6 +37,8 @@
         }
 
         private static String[] InternalGetFolder(String Folder) {
+            Directory.CreateDirectory(Folder);
+
             return Directory.GetDirectories(Folder);
         }
     }

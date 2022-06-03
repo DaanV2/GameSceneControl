@@ -1,4 +1,7 @@
-﻿namespace GameScenceControl;
+﻿using GameSceneControl.Pages;
+using GameSceneControl.Pages.Rooms;
+
+namespace GameSceneControl;
 
 public partial class MainPage : ContentPage {
 
@@ -7,6 +10,6 @@ public partial class MainPage : ContentPage {
     }
 
     private void RoomButton_Clicked(object sender, EventArgs e) {
-        Navigation.PushAsync(new Pages.RoomsPage());
+        Shell.Current.GoToAsync(nameof(RoomsPage));
     }
 }

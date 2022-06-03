@@ -37,7 +37,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Serialization\Classes\ServiceData\ServiceData - Properties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Serialization\Classes\ServiceData\ServiceData - Casting.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Serialization\Classes\ServiceData\ServiceData - Variables.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Static Classes\Controller\Info - Const.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Static Classes\Controller\Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Static Classes\Controller\Data.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Static Classes\Controller\Info.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Enumerators\ActuatorType\ActuatorType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Interfaces\IActuator.cs" />

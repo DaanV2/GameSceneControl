@@ -1,4 +1,6 @@
-﻿namespace GameSceneControl {
+﻿using System.Diagnostics;
+
+namespace GameSceneControl {
     public static partial class DataStorage {
         /// <summary>
         /// 
@@ -19,7 +21,10 @@
         /// <param name="Subdirectory"></param>
         /// <returns></returns>
         public static (Boolean, T) Get<T>(String Filename, String Subdirectory) {
-            String Filepath = Path.Join(DataStorage.RootFolder, Subdirectory, Filename);
+            String Folder = Path.Join(DataStorage.RootFolder, Subdirectory);
+            _ = Directory.CreateDirectory(Folder);
+
+            String Filepath = Path.Join(Folder, Filename);
             return Load<T>(Filepath);
         }
 
@@ -31,16 +36,17 @@
         /// <returns></returns>
         public static (Boolean, T) Load<T>(String Filepath) {
             T result = default;
-            Boolean success = false;
+            Boolean success;
             Stream Reader = null;
 
             try {
                 Reader = new FileStream(Filepath, FileMode.Open);
                 result = System.Text.Json.JsonSerializer.Deserialize<T>(Reader);
+                success = true;
             }
             catch (Exception ex) {
                 success = false;
-                Console.WriteLine(ex?.Message);
+                Debug.WriteLine(ex?.Message);
             }
 
             if (Reader != null) {
@@ -71,7 +77,10 @@
         /// <param name="value"></param>
         /// <returns></returns>
         public static Boolean Set<T>(String Filename, String Subdirectory, T value) {
-            String Filepath = Path.Join(DataStorage.RootFolder, Subdirectory, Filename);
+            String Folder = Path.Join(DataStorage.RootFolder, Subdirectory);
+            _ = Directory.CreateDirectory(Folder);
+
+            String Filepath = Path.Join(Folder, Filename);
             return Save<T>(Filepath, value);
         }
 
@@ -89,10 +98,11 @@
             try {
                 Writer = new FileStream(Filepath, FileMode.Create);
                 System.Text.Json.JsonSerializer.Serialize<T>(Writer, value);
+                success = true;
             }
             catch (Exception ex) {
                 success = false;
-                Console.WriteLine(ex?.Message);
+                Debug.WriteLine(ex?.Message);
             }
 
             if (Writer != null) {

@@ -1,6 +1,6 @@
 ﻿using GameSceneControl;
 
-namespace GameScenceControl;
+namespace GameSceneControl;
 
 public partial class App : Application {
     public App() {

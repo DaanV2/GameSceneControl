@@ -1,5 +1,3 @@
-using GameSceneControl;
-
 namespace GameSceneControl.Controls;
 
 public partial class TimeOfDaySlider : ContentView {
@@ -10,22 +8,23 @@ public partial class TimeOfDaySlider : ContentView {
     public TimeOfDayValue TimeOfDay { get; set; }
 
     public TimeOfDaySlider() {
-        InitializeComponent();
+        this.InitializeComponent();
 
-        this.timeSlider.DragCompleted += TimeSlider_DragCompleted;
-        this.timeSlider.DragStarted += TimeSlider_DragStarted;
-        this.timeSlider.ValueChanged += TimeSlider_ValueChanged;
+        this.TimeOfDay = new TimeOfDayValue();
+        this.timeSlider.DragCompleted += this.TimeSlider_DragCompleted;
+        this.timeSlider.DragStarted += this.TimeSlider_DragStarted;
+        this.timeSlider.ValueChanged += this.TimeSlider_ValueChanged;
     }
 
-    private void TimeSlider_ValueChanged(object sender, ValueChangedEventArgs e) {
+    private void TimeSlider_ValueChanged(Object sender, ValueChangedEventArgs e) {
         this.ValueChanged?.Invoke(sender, e);
     }
 
-    private void TimeSlider_DragStarted(object sender, EventArgs e) {
+    private void TimeSlider_DragStarted(Object sender, EventArgs e) {
         this.DragStarted?.Invoke(sender, e);
     }
 
-    private void TimeSlider_DragCompleted(object sender, EventArgs e) {
+    private void TimeSlider_DragCompleted(Object sender, EventArgs e) {
         this.TimeOfDay.Value = this.timeSlider.Value;
         this.DragCompleted?.Invoke(this, e);
     }
