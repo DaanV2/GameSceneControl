@@ -18,6 +18,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\Lamp\Lamp - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\Lamp\Lamp - Properties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\Lamp\Lamp - Variables.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\RoomInfo\RoomInfo - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\RoomInfo\RoomInfo - Properties.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\RoomInfo\RoomInfo - Variables.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\Room\Room - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\Room\Room - Properties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\Room\Room - Variables.cs" />
@@ -34,6 +37,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Serialization\Classes\ServiceData\ServiceData - Properties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Serialization\Classes\ServiceData\ServiceData - Casting.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Serialization\Classes\ServiceData\ServiceData - Variables.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Static Classes\Controller\Info - Const.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Static Classes\Controller\Info.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Enumerators\ActuatorType\ActuatorType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Interfaces\IActuator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Interfaces\IActuatorLight.cs" />

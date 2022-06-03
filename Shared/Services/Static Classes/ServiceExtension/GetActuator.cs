@@ -8,7 +8,7 @@
         /// <param name="Service"></param>
         /// <param name="ID"></param>
         /// <returns></returns>
-        public static IActuator GetActuator<T>(this T Service, Guid ID)
+        public static IActuator GetActuator<T>(this T Service, String ID)
             where T : IService {
 
             var Actuators = Service.GetActuators();

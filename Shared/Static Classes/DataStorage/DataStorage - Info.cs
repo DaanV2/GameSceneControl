@@ -1,47 +1,40 @@
 ﻿namespace GameSceneControl {
     public static partial class DataStorage {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        public static string[] GetFiles() {
+        /// <summary>Returns all aviable files in the data storage</summary>
+        /// <returns>An array of files</returns>
+        public static String[] GetFiles() {
             return InternalGetFiles(DataStorage.RootFolder);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        public static string[] GetFiles(string Subdirectory) {
+        /// <summary>Returns all aviable files in the folder and subfolders</summary>
+        /// <param name="Subdirectory">The subdirectory to start in</param>
+        /// <returns>An array of files</returns>
+        public static String[] GetFiles(String Subdirectory) {
             return InternalGetFiles(Path.Join(DataStorage.RootFolder, Subdirectory));
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="Folder"></param>
+        /// <summary>Returns all aviable files in the folder and subfolders</summary>
+        /// <param name="Folder">The folder to start the search from</param>
+        /// <returns>An array of files</returns>
+        private static String[] InternalGetFiles(String Folder) {
+            return Directory.GetFiles(Folder, "*", SearchOption.AllDirectories);
+        }
+
+        /// <summary>Returns all folders</summary>
         /// <returns></returns>
-        private static string[] InternalGetFiles(string Folder) {
-            return Directory.GetFiles(Folder);
+        public static String[] GetFolder() {
+            return InternalGetFolder(DataStorage.RootFolder);
         }
 
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
-        public static string[] GetFolder() {
-            return InternalGetFiles(DataStorage.RootFolder);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        public static string[] GetFolder(string Subdirectory) {
+        public static String[] GetFolder(String Subdirectory) {
             return InternalGetFolder(Path.Join(DataStorage.RootFolder, Subdirectory));
         }
 
-        private static string[] InternalGetFolder(string Folder) {
+        private static String[] InternalGetFolder(String Folder) {
             return Directory.GetDirectories(Folder);
         }
     }
