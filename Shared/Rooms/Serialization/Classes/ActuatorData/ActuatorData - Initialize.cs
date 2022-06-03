@@ -9,9 +9,9 @@ namespace GameSceneControl.Rooms.Serialization {
         }
 
         /// <summary>Creates a new instance of <see cref="ActuatorData"/></summary>
-        /// <param name="actuator"></param>
-        public ActuatorData(IActuator actuator) {
-            this.FromActuator(actuator);
+        /// <param name="lamp"></param>
+        public ActuatorData(Lamp lamp) {
+            this.FromLamp(lamp);
         }
     }
 }

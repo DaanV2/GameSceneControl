@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace GameSceneControl.Rooms.Serialization {
-    public partial class ActuatorData {
+    public partial class ActuatorData : IIdentifiable {
         /// <summary>
         /// 
         /// </summary>
