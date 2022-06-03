@@ -1,6 +1,6 @@
 using GameSceneControl;
 
-namespace GameScenceControl.Controls;
+namespace GameSceneControl.Controls;
 
 public partial class TimeOfDaySlider : ContentView {
     public event EventHandler<ValueChangedEventArgs> ValueChanged;

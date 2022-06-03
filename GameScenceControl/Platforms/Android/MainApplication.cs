@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace GameScenceControl;
+namespace GameSceneControl;
 
 [Application]
 public class MainApplication : MauiApplication
