@@ -1,20 +1,16 @@
-﻿namespace GameSceneControl {
+﻿using System.Diagnostics;
+
+namespace GameSceneControl {
     ///DOLATER <summary>add description for class: DataStorage</summary>
     public static partial class DataStorage {
         public static void Initialize() {
-            string Folder;
-#if WINDOWS
-            Folder = Path.Join(
-                Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
-                "GameSceneControl");
-#else
-            Folder = Path.Join(Environment.CurrentDirectory);
-#endif
+            String Folder = Environment.GetFolderPath(
+                Environment.SpecialFolder.LocalApplicationData);
 
             Folder = Path.Join(Folder, "storage");
-            Console.WriteLine("starting storage: " + Folder);
+            Debug.WriteLine("starting storage: " + Folder);
 
-            System.IO.Directory.CreateDirectory(Folder);
+            _ = System.IO.Directory.CreateDirectory(Folder);
             DataStorage.RootFolder = Folder;
         }
     }
