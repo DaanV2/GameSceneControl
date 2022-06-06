@@ -2,7 +2,7 @@
 using GameSceneControl.Rooms;
 
 namespace GameSceneControl.Pages.Rooms {
-    [QueryProperty(nameof(RoomInfo), "RoomInfo")]
+    [QueryProperty(nameof(RoomInfo), "info")]
     public partial class RoomPageModel : BaseViewModel {
         private RoomInfo roomInfo;
 

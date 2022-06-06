@@ -9,7 +9,7 @@
              Title="{Binding RoomInfo.Name}">
 
     <StackLayout>
-        <custom:TimeOfDaySlider/>
+        <custom:TimeOfDaySlider Padding="10"/>
         <TabbedPage>
             
         </TabbedPage>

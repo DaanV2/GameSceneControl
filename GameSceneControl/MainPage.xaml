@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GameSceneControl.MainPage"
-             xmlns:controls="clr-namespace:GameSceneControl.Controls">
+             xmlns:controls="clr-namespace:GameSceneControl.Controls"
+>
 			 
     <ScrollView>
         <VerticalStackLayout 
@@ -10,7 +11,7 @@
             Padding="30,0" 
             VerticalOptions="Center">
 
-            <Button x:Name="RoomButton" Text="Rooms" Clicked="RoomButton_Clicked"/>
+            <Button x:Name="RoomButton" Text="Rooms" Clicked="RoomButton_Clicked" />
 
         </VerticalStackLayout>
     </ScrollView>

@@ -2,7 +2,7 @@ using GameSceneControl.Rooms;
 
 namespace GameSceneControl.Pages.Rooms;
 
-[QueryProperty("RoomInfo", "Info")]
+[QueryProperty("RoomInfo", "info")]
 public partial class RoomPage : ContentPage {
     public RoomPage(RoomPageModel Model) {
         this.InitializeComponent();
