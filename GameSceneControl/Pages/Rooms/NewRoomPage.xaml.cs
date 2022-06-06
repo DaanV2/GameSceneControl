@@ -10,22 +10,19 @@ public partial class NewRoomPage : ContentPage {
         this.ID.Text = Guid.NewGuid().ToString();
     }
 
-
     public RoomInfo RoomInfo => new(this.Name.Text, this.ID.Text, this.Description.Text);
-
 
     private void Button_Add_Clicked(Object sender, EventArgs e) {
         RoomInfo Info = this.RoomInfo;
         var Data = new RoomData(Info.ID);
 
         if (Info.Store() & Data.Store()) {
-            Shell.Current.GoToAsync(nameof(RoomsPage));
+             GameSceneControl.Navigation.GotoPage(nameof(RoomPage), new Dictionary<String, Object> { { "info", Info } });
         }
         else {
-            Shell.Current.GoToAsync(nameof(RoomPage), true, new Dictionary<String, Object> { { "info", Info } });
+            GameSceneControl.Navigation.GotoPage(nameof(RoomsPage));            
         }
     }
-
     private void Button_Cancel_Clicked(Object sender, EventArgs e) {
         Shell.Current.GoToAsync(nameof(RoomsPage));
     }

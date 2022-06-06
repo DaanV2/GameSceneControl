@@ -10,7 +10,7 @@ public partial class RoomsPage : ContentPage {
     }
 
     private void Button_Add_Clicked(Object sender, EventArgs e) {
-        Shell.Current.GoToAsync(nameof(NewRoomPage));
+        GameSceneControl.Navigation.GotoPage(nameof(NewRoomPage));
     }
 
     protected override void OnAppearing() {
@@ -23,6 +23,6 @@ public partial class RoomsPage : ContentPage {
         if (sender is not BindableObject binded) return;
         if (binded.BindingContext is not RoomInfo context) return;
 
-        Shell.Current.GoToAsync(nameof(RoomPage), true, new Dictionary<String, Object> { { "info", context } });
+        GameSceneControl.Navigation.GotoPage(nameof(RoomPage), new Dictionary<String, Object> { { "info", context } });
     }
 }
