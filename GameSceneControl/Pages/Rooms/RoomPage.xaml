@@ -10,9 +10,6 @@
 
     <StackLayout>
         <custom:TimeOfDaySlider Padding="10"/>
-        <TabbedPage>
-            
-        </TabbedPage>
     </StackLayout>
 
 </ContentPage>
