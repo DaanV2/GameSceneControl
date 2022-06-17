@@ -1,13 +1,22 @@
 namespace GameSceneControl.Controls;
 
 public partial class TimeOfDaySlider : ContentView {
+    private TimeOfDayValue timeOfDay;
+
     public event EventHandler<ValueChangedEventArgs> ValueChanged;
     public event EventHandler DragCompleted;
     public event EventHandler DragStarted;
 
-    public TimeOfDayValue TimeOfDay { get; set; }
+    public TimeOfDayValue TimeOfDay {
+        get => this.timeOfDay;
+        set {
+            this.timeOfDay = value;
+            this.timeSlider.Value = this.timeOfDay.Value;
+        }
+    }
 
     public TimeOfDaySlider() {
+
         this.InitializeComponent();
 
         this.TimeOfDay = new TimeOfDayValue();
