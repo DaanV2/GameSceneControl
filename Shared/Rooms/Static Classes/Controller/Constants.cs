@@ -6,7 +6,7 @@
         /// <summary>The name of the room data file</summary>
         public const String DataFilename = "data.json";
         /// <summary>The name of the room folder</summary>
-        public const string RoomFolder = "rooms";
+        public const String RoomFolder = "rooms";
 
     }
 }

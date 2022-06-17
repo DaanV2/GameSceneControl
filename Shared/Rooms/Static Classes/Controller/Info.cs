@@ -6,7 +6,7 @@
         /// <param name="ID"></param>
         /// <returns></returns>
         public static RoomInfo GetInfo(String ID) {
-            (Boolean ok, RoomInfo info) = DataStorage.Cache.Get<RoomInfo>(InfoFileName, Path.Join(RoomFolder, ID));
+            (Boolean ok, RoomInfo info) = DataStorage.App.Get<RoomInfo>(InfoFileName, Path.Join(RoomFolder, ID));
 
             return ok ? info : null;
         }
@@ -16,14 +16,14 @@
         /// </summary>
         /// <returns></returns>
         public static List<RoomInfo> GetRooms() {
-            String[] files = DataStorage.Cache.GetFiles(RoomFolder);
+            String[] files = DataStorage.App.GetFiles(RoomFolder);
             var result = new List<RoomInfo>(files.Length / 2);
 
             foreach (String infoFile in files) {
                 //If not info then continu to the next one
                 if (!infoFile.EndsWith(InfoFileName)) continue;
 
-                (Boolean ok, RoomInfo info) = DataStorage.Cache.Load<RoomInfo>(infoFile);
+                (Boolean ok, RoomInfo info) = DataStorage.App.Load<RoomInfo>(infoFile);
                 if (ok) result.Add(info);
             }
 
@@ -35,7 +35,7 @@
         /// </summary>
         /// <param name="Info"></param>
         public static Boolean Store(this RoomInfo Info) {
-            return DataStorage.Cache.Set(InfoFileName, Path.Join(RoomFolder, Info.ID), Info);
+            return DataStorage.App.Set(InfoFileName, Path.Join(RoomFolder, Info.ID), Info);
         }
     }
 }
