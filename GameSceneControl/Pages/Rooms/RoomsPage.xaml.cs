@@ -3,6 +3,8 @@ using GameSceneControl.Rooms;
 
 namespace GameSceneControl.Pages.Rooms;
 public partial class RoomsPage : ContentPage {
+
+
     public RoomsPage(RoomsInfoModel Model) {
         this.InitializeComponent();
 
@@ -23,6 +25,6 @@ public partial class RoomsPage : ContentPage {
         if (sender is not BindableObject binded) return;
         if (binded.BindingContext is not RoomInfo context) return;
 
-        GameSceneControl.Navigation.GotoPage(nameof(RoomPage), new Dictionary<String, Object> { { "info", context } });
+        GameSceneControl.Navigation.GotoPage(nameof(RoomPage), ( "info", context ));
     }
 }

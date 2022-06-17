@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
+             xmlns:local="clr-namespace:GameSceneControl.Pages.Rooms"
+             x:Class="GameSceneControl.Pages.Rooms.RoomEditPage"             
+             x:DataType="local:RoomPageModel"
+             Title="Edit">
+    <VerticalStackLayout>
+        <Label Text="Info" FontSize="Subtitle"/>
+        <Grid RowDefinitions="*, *" ColumnDefinitions="200, *">
+
+            <Label Grid.Row="0" Grid.Column="0" Text="Name"/>
+            <Editor Text="{Binding RoomInfo.Name}" Grid.Row="0" Grid.Column="1" x:Name="EditorRoomInfo"/>
+
+            <Label Grid.Row="1" Grid.Column="0" Text="Description"/>
+            <Editor Text="{Binding RoomInfo.Description}" Grid.Row="1" Grid.Column="1"/>
+        </Grid>
+
+        <Label Text="Administration" FontSize="Subtitle"/>
+        <Button Text="Delete" HorizontalOptions="Start" x:Name="Button_Delete" Clicked="Button_Delete_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>

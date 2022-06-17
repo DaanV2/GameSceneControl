@@ -9,6 +9,12 @@
     <Import_RootNamespace>GameSceneControl</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\DataFolder\DataFolder - Delete.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\DataFolder\DataFolder - Set.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\DataFolder\DataFolder - Get.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\DataFolder\DataFolder - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\DataFolder\DataFolder - Properties.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\DataFolder\DataFolder - Info.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\TimeOfDayValue\TimeOfDayValue - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\TimeOfDayValue\TimeOfDayValue - Properties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\TimeOfDayValue\TimeOfDayValue - Variables.cs" />
@@ -49,7 +55,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\Static Classes\ServiceExtension\GetActuator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Static Classes\ServiceFactory\ServiceFactory - Propeties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Static Classes\ServiceFactory\ServiceFactory.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\DataStorage\DataStorage - Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\DataStorage\DataStorage - Delete.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\DataStorage\DataStorage - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\DataStorage\DataStorage - Get Set.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\DataStorage\DataStorage - Properties.cs" />

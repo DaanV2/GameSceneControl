@@ -3,7 +3,7 @@
     public partial class TimeOfDayValue {
         /// <summary>Creates a new instance of <see cref="TimeOfDayValue"/></summary>
         public TimeOfDayValue() {
-            this.Value = 0f;
+            this.Value = 0.5f;
         }
     }
 }

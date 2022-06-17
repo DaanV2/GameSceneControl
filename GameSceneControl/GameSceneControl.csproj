@@ -60,10 +60,13 @@
 	  <MauiXaml Update="Pages\RoomPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\Rooms\RoomsPage.xaml">
+	  <MauiXaml Update="Pages\Rooms\RoomEditPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\Rooms\RoomPage.xaml">
+	  <MauiXaml Update="Pages\Rooms\RoomScenePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Rooms\RoomsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

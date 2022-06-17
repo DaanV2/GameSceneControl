@@ -16,18 +16,20 @@ public partial class NewRoomPage : ContentPage {
         RoomInfo Info = this.RoomInfo;
         var Data = new RoomData(Info.ID);
 
+        Navigation.RemovePage(this);
         if (Info.Store() & Data.Store()) {
-             GameSceneControl.Navigation.GotoPage(nameof(RoomPage), new Dictionary<String, Object> { { "info", Info } });
+            GameSceneControl.Navigation.GotoPage(nameof(RoomPage), ("info", Info));
         }
         else {
-            GameSceneControl.Navigation.GotoPage(nameof(RoomsPage));            
+            GameSceneControl.Navigation.GotoPage(nameof(RoomsPage));
         }
     }
     private void Button_Cancel_Clicked(Object sender, EventArgs e) {
-        Shell.Current.GoToAsync(nameof(RoomsPage));
+        Navigation.RemovePage(this);
+        GameSceneControl.Navigation.GotoPage(nameof(RoomsPage));
     }
 
-    private void Validate_Input(Object sender, EventArgs e) {
+    private void Validate_Input(Object sender, TextChangedEventArgs e) {
         this.Button_Add.IsEnabled = this.Name.HasText() && this.ID.HasText();
     }
 }

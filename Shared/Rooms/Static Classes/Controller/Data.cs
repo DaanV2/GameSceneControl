@@ -17,7 +17,7 @@ namespace GameSceneControl.Rooms {
         /// <param name="ID"></param>
         /// <returns></returns>
         public static RoomData GetData(String ID) {
-            (Boolean ok, RoomData info) = DataStorage.Get<RoomData>(DataFilename, Path.Join(RoomFolder, ID));
+            (Boolean ok, RoomData info) = DataStorage.Cache.Get<RoomData>(DataFilename, Path.Join(RoomFolder, ID));
 
             return ok ? info : null;
         }
@@ -27,7 +27,15 @@ namespace GameSceneControl.Rooms {
         /// </summary>
         /// <param name="Data"></param>
         public static Boolean Store(this RoomData Data) {
-            return DataStorage.Set(DataFilename, Path.Join(RoomFolder, Data.ID), Data);
+            return DataStorage.Cache.Set(DataFilename, Path.Join(RoomFolder, Data.ID), Data);
+        }
+
+        public static Boolean Remove(RoomInfo Data) {
+            return Remove(Data.ID);
+        }
+
+        public static Boolean Remove(String ID) {
+            return DataStorage.Cache.Delete(DataFilename, Path.Join(RoomFolder, ID));
         }
     }
 }

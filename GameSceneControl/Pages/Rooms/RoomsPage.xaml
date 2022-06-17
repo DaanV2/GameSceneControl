@@ -6,27 +6,32 @@
              x:DataType="local:RoomsInfoModel"
              x:Class="GameSceneControl.Pages.Rooms.RoomsPage"
              Title="Rooms">
-    <StackLayout>
-        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Grid.Row="0">
             <Button x:Name="Button_Add" Text="+" Clicked="Button_Add_Clicked"/>
         </StackLayout>
 
-        <CollectionView ItemsSource="{Binding Rooms}">
+        <CollectionView ItemsSource="{Binding Rooms}" Grid.Row="1" HorizontalOptions="FillAndExpand">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="rooms:RoomInfo">
-                    <Frame BorderColor="Black">
+                    <Frame BorderColor="{StaticResource Primary}" HorizontalOptions="FillAndExpand" Padding="5" Margin="5">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="Room_Tapped"/>
                             <ClickGestureRecognizer Clicked="Room_Tapped"/>
                         </Frame.GestureRecognizers>
-                        <VerticalStackLayout BackgroundColor="Blue">
-                            <Label Text="{Binding Name}"/>
+                        <VerticalStackLayout Padding="5" Margin="5">
+                            <Label Text="{Binding Name}" FontSize="Medium"/>
                             <Label Text="{Binding Description}"/>
                         </VerticalStackLayout>
                     </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        
-    </StackLayout>
+
+    </Grid>
 </ContentPage>

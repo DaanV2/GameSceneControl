@@ -2,31 +2,43 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GameSceneControl.Pages.Rooms.NewRoomPage"
-             Title="NewRoomPage">
+             Title="Create New Room">
     <StackLayout>
         <Label Text="New Room"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
-        
+
         <Label x:Name="ID"/>
 
-        <HorizontalStackLayout Margin="0,10">
-            <Label Text="Name" VerticalTextAlignment="Center"/>
-            <Editor x:Name="Name" Placeholder="GameRoom" 
-                MaxLength="64"
-                Completed="Validate_Input"
-                Keyboard="Text"/>
-        </HorizontalStackLayout>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-        <HorizontalStackLayout Margin="0,10">
-            <Label Text="Description" VerticalTextAlignment="Center"/>
-            <Editor x:Name="Description" Placeholder="My TTRPD GameRoom" 
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="10"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="Name" VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="0"/>
+            <Editor x:Name="Name" Placeholder="GameRoom" 
+                Grid.Column="1" Grid.Row="0"
+                MaxLength="64"
                 Keyboard="Text"
-                MaxLength="256" Completed="Validate_Input"/>
-        </HorizontalStackLayout>
+                TextChanged="Validate_Input" IsSpellCheckEnabled="true" IsTextPredictionEnabled="true" />
+
+            <Label Text="Description" VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="1"/>
+            <Editor x:Name="Description" Placeholder="My TTRPD GameRoom"  
+                Grid.Column="1" Grid.Row="1"
+                Keyboard="Text"
+                MaxLength="256"
+                    TextChanged="Validate_Input"/>
+        </Grid>
 
         <StackLayout Orientation="Horizontal">
-            <Button x:Name="Button_Add" Text="Add" Clicked="Button_Add_Clicked"/>
+            <Button x:Name="Button_Add" Text="Add" Clicked="Button_Add_Clicked" IsEnabled="False" ZIndex=""/>
             <Button x:Name="Button_Cancel" Text="Cancel" Clicked="Button_Cancel_Clicked"/>
         </StackLayout>
     </StackLayout>
