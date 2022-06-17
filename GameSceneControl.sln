@@ -15,6 +15,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{88ADEFE9-6
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{5C4CC66E-04E2-4627-9B23-B947851F49EB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{37BCC20E-F66A-47C5-A6D7-0FAB6231E304}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "Testing\UnitTests\UnitTests.csproj", "{095B7063-FB67-431F-A733-F2D5AB234344}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,10 @@ Global
 		{2408E308-9709-417A-A059-FE02EAC0BA29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2408E308-9709-417A-A059-FE02EAC0BA29}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2408E308-9709-417A-A059-FE02EAC0BA29}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{095B7063-FB67-431F-A733-F2D5AB234344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{095B7063-FB67-431F-A733-F2D5AB234344}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{095B7063-FB67-431F-A733-F2D5AB234344}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{095B7063-FB67-431F-A733-F2D5AB234344}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -35,11 +43,13 @@ Global
 		{2408E308-9709-417A-A059-FE02EAC0BA29} = {88ADEFE9-6FB3-4ABF-B7EF-6170EE96EEBA}
 		{C34FEF6B-38C0-4AA4-9FF5-FAACC132EBC6} = {5C4CC66E-04E2-4627-9B23-B947851F49EB}
 		{C14F5CA3-EA09-4D32-A4DB-91CA94C1E244} = {8A5BB74B-3830-4F69-9958-A84BC10C2D6E}
+		{095B7063-FB67-431F-A733-F2D5AB234344} = {37BCC20E-F66A-47C5-A6D7-0FAB6231E304}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Shared\Shared.projitems*{095b7063-fb67-431f-a733-f2d5ab234344}*SharedItemsImports = 5
 		Services\PhillipsHue\PhillipsHue.projitems*{2408e308-9709-417a-a059-fe02eac0ba29}*SharedItemsImports = 5
 		Shared\Shared.projitems*{2408e308-9709-417a-a059-fe02eac0ba29}*SharedItemsImports = 5
 		Services\PhillipsHue\PhillipsHue.projitems*{c14f5ca3-ea09-4d32-a4db-91ca94c1e244}*SharedItemsImports = 13

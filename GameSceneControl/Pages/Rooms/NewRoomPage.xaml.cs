@@ -4,7 +4,7 @@ using GameSceneControl.Rooms.Serialization;
 namespace GameSceneControl.Pages.Rooms;
 
 public partial class NewRoomPage : ContentPage {
-    public NewRoomPage() {
+    public NewRoomPage(RoomPageModel Model) {
         this.InitializeComponent();
 
         this.ID.Text = Guid.NewGuid().ToString();

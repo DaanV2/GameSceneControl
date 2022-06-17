@@ -5,7 +5,6 @@ namespace GameSceneControl {
         /// <summary>
         /// 
         /// </summary>
-        /// <typeparam name="T"></typeparam>
         /// <param name="Filename"></param>
         /// <returns></returns>
         public  Boolean Delete(String Filename) {

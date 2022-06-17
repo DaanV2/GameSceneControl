@@ -2,9 +2,12 @@ using GameSceneControl.Rooms;
 
 namespace GameSceneControl.Pages.Rooms;
 
+
+[QueryProperty("RoomInfo", "info")]
 public partial class RoomEditPage : ContentPage {
-    public RoomEditPage() {
+    public RoomEditPage(RoomPageModel Model) {
         this.InitializeComponent();
+        this.BindingContext = Model;
     }
 
 

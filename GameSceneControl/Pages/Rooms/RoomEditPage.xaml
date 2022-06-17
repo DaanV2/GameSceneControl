@@ -7,11 +7,15 @@
              Title="Edit">
     <VerticalStackLayout>
         <Label Text="Info" FontSize="Subtitle"/>
-        <Grid RowDefinitions="*, *" ColumnDefinitions="200, *">
+        <Grid RowDefinitions="*, *" ColumnDefinitions="100, *">
 
             <Label Grid.Row="0" Grid.Column="0" Text="Name"/>
             <Editor Text="{Binding RoomInfo.Name}" Grid.Row="0" Grid.Column="1"
-                    Completed="Editor_Completed"/>
+                Completed="Editor_Completed"
+                MaxLength="64"
+                Keyboard="Text"
+                IsSpellCheckEnabled="true" 
+                IsTextPredictionEnabled="true"/>
 
             <Label Grid.Row="1" Grid.Column="0" Text="Description"/>
             <Editor Text="{Binding RoomInfo.Description}" Grid.Row="1" Grid.Column="1"
