@@ -10,10 +10,12 @@
         <Grid RowDefinitions="*, *" ColumnDefinitions="200, *">
 
             <Label Grid.Row="0" Grid.Column="0" Text="Name"/>
-            <Editor Text="{Binding RoomInfo.Name}" Grid.Row="0" Grid.Column="1" x:Name="EditorRoomInfo"/>
+            <Editor Text="{Binding RoomInfo.Name}" Grid.Row="0" Grid.Column="1"
+                    Completed="Editor_Completed"/>
 
             <Label Grid.Row="1" Grid.Column="0" Text="Description"/>
-            <Editor Text="{Binding RoomInfo.Description}" Grid.Row="1" Grid.Column="1"/>
+            <Editor Text="{Binding RoomInfo.Description}" Grid.Row="1" Grid.Column="1"
+                    Completed="Editor_Completed"/>
         </Grid>
 
         <Label Text="Administration" FontSize="Subtitle"/>

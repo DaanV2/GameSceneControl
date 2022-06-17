@@ -10,7 +10,7 @@ namespace GameSceneControl {
         /// <returns></returns>
         public  Boolean Delete(String Filename) {
             String Filepath = Path.Join(this.RootFolder, Filename);
-            return InternalDelete(Filepath);
+            return DeleteFile(Filepath);
         }
 
         /// <summary>
@@ -25,14 +25,29 @@ namespace GameSceneControl {
 
             String Filepath = Path.Join(Folder, Filename);
 
-            return InternalDelete(Filepath);
+            return DeleteFile(Filepath);
         }
 
-        internal  Boolean InternalDelete(String Filepath) {
+        public Boolean DeleteFile(String Filepath) {
             Boolean success = false;
 
             try {
                 System.IO.File.Delete(Filepath);
+                success = true;
+            }
+            catch (Exception ex) {
+                Debug.WriteLine(ex?.Message);
+            }
+
+            return success;
+        }
+
+        public Boolean DeleteFolder(String SubFolder) {
+            String Folder = Path.Join(this.RootFolder, SubFolder);
+            Boolean success = false;
+
+            try {
+                System.IO.Directory.Delete(Folder, true);
                 success = true;
             }
             catch (Exception ex) {

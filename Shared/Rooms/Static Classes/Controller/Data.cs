@@ -35,7 +35,7 @@ namespace GameSceneControl.Rooms {
         }
 
         public static Boolean Remove(String ID) {
-            return DataStorage.Cache.Delete(DataFilename, Path.Join(RoomFolder, ID));
+            return DataStorage.Cache.DeleteFolder(Path.Join(RoomFolder, ID));
         }
     }
 }

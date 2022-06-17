@@ -38,7 +38,7 @@
         </Grid>
 
         <StackLayout Orientation="Horizontal">
-            <Button x:Name="Button_Add" Text="Add" Clicked="Button_Add_Clicked" IsEnabled="False" ZIndex=""/>
+            <Button x:Name="Button_Add" Text="Add" Clicked="Button_Add_Clicked" IsEnabled="False"/>
             <Button x:Name="Button_Cancel" Text="Cancel" Clicked="Button_Cancel_Clicked"/>
         </StackLayout>
     </StackLayout>
