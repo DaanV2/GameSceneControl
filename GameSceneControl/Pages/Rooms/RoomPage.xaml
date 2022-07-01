@@ -5,10 +5,7 @@
              xmlns:custom="clr-namespace:GameSceneControl.Controls"
              x:Class="GameSceneControl.Pages.Rooms.RoomPage"
              x:DataType="local:RoomPageModel"
-             BackgroundColor="White"
-             Title="{Binding RoomInfo.Name}">
-    
-    
+             Title="{Binding Controller.RoomInfo.Name}">
 
     <FlexLayout AlignItems="Start" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
         <Button Text="Scenes" x:Name="Button_Scenes" Clicked="Button_Scenes_Clicked"/>

@@ -27,10 +27,20 @@
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\Lamp\Lamp - Variables.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\RoomInfo\RoomInfo - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\RoomInfo\RoomInfo - Properties.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\RoomInfo\RoomInfo - Overrides.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\RoomInfo\RoomInfo - Variables.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\Room\Room - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\Room\Room - Properties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Classes\Room\Room - Variables.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Controllers\Classes\LocalController\LocalController - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Controllers\Classes\LocalController\LocalController - IRoomController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Controllers\Classes\LocalController\LocalController - Properties.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Controllers\Classes\LocalController\LocalController - Start.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Controllers\Classes\LocalController\LocalController - Variables.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Controllers\Enumerators\ControllerState\ControllerState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Controllers\Interfaces\IRoomController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Controllers\Static Classes\Extension\Extension - Controllers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rooms\Controllers\Static Classes\Factory\Factory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Enumerators\AreaType\AreaType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Serialization\Classes\ActuatorData\ActuatorData - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Serialization\Classes\ActuatorData\ActuatorData - Properties.cs" />
@@ -47,6 +57,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Static Classes\Controller\Constants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Static Classes\Controller\Data.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rooms\Static Classes\Controller\Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Abstract Classes\ActiveService\ActiveService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Enumerators\ActuatorType\ActuatorType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Interfaces\IActuator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Interfaces\IActuatorLight.cs" />
@@ -58,6 +69,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\Static Classes\ServiceFactory\ServiceFactory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\DataStorage\DataStorage - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\DataStorage\DataStorage - Properties.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\ErrorHandling\ErrorHandling.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\IdentifiableExtension\ByID.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Rooms\Interfaces\" />
   </ItemGroup>
 </Project>

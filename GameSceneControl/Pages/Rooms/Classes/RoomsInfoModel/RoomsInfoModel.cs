@@ -1,5 +1,4 @@
-﻿using GameSceneControl.Classes.BaseViewModel;
-using GameSceneControl.Rooms;
+﻿using GameSceneControl.Rooms;
 using System.Collections.ObjectModel;
 
 namespace GameSceneControl.Pages.Rooms {

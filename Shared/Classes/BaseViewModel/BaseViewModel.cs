@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace GameSceneControl.Classes.BaseViewModel {
+namespace GameSceneControl {
     ///DOLATER <summary>add description for class: BaseViewModel</summary>
     public partial class BaseViewModel : INotifyPropertyChanged {
         /// <inheritdoc/>

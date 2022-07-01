@@ -25,6 +25,6 @@ public partial class RoomsPage : ContentPage {
         if (sender is not BindableObject binded) return;
         if (binded.BindingContext is not RoomInfo context) return;
 
-        GameSceneControl.Navigation.GotoPage(nameof(RoomPage), ( "info", context ));
+        RoomPage.OpenRoomPage(context);
     }
 }
