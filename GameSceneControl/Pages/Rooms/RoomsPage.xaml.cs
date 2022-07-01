@@ -27,4 +27,27 @@ public partial class RoomsPage : ContentPage {
 
         RoomPage.OpenRoomPage(context);
     }
+
+    private void ButtonEdit_Invoked(Object sender, EventArgs e) {
+        if (sender is not BindableObject binded) return;
+        if (binded.BindingContext is not RoomInfo Info) return;
+
+        GameSceneControl.Navigation.GotoPage(nameof(RoomEditPage), ("info", Info));
+    }
+
+    private void DeleteButton_Invoked(Object sender, EventArgs e) {
+        if (sender is not BindableObject binded) return;
+        if (binded.BindingContext is not RoomInfo Info) return;
+
+        this.DeleteRoom(Info);
+    }
+    private async void DeleteRoom(RoomInfo Info) {
+        Boolean answer = await this.DisplayAlert("Are you sure?", $"You are about to delete the room: {Info.Name}", "Yes", "No");
+
+        if (answer == true) {
+            if (Controller.Remove(Info) && this.BindingContext is RoomsInfoModel Model) {
+                _ = Model.Rooms.Remove(Info);
+            }
+        }
+    }
 }

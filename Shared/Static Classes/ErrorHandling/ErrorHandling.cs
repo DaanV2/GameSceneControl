@@ -11,6 +11,14 @@
             //If we cant display it, then we need to just keep throwing it
             if (Shell.Current is null) throw ex;
 
+            //If other thread, call it on the original thread
+            if (Shell.Current.Dispatcher.IsDispatchRequired) {
+                Shell.Current.Dispatcher.Dispatch(() => {
+                    HandleError(ex, Title, Message);
+                });
+                return;
+            }
+
 #if DEBUG
             Shell.Current.DisplayAlert($"Error: {Message}", $"{Message}\n{ex.Message}\n{ex.StackTrace}", "ok");
 

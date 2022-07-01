@@ -13,8 +13,8 @@ public partial class RoomPage : ContentPage {
     public static void OpenRoomPage(RoomInfo Info) {
         var Model = new RoomPageModel(Info);
         Model.CheckController();
-        
-        GameSceneControl.Navigation.GotoPage(new RoomPage(Model))
+
+        GameSceneControl.Navigation.GotoPage(new RoomPage(Model));
     }
 
     public RoomPage(RoomPageModel Model) {
@@ -35,7 +35,5 @@ public partial class RoomPage : ContentPage {
     private void Button_Edit_Clicked(Object sender, EventArgs e) {
         if (this.BindingContext is not RoomPageModel RPM) return;
 
-        var Model = new RoomEditPageModel(RPM.RoomInfo);
-        _ = this.Navigation.PushAsync(new RoomEditPage(Model));
     }
 }

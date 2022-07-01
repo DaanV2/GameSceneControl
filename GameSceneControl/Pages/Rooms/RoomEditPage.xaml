@@ -10,19 +10,15 @@
         <Grid RowDefinitions="*, *" ColumnDefinitions="100, *">
 
             <Label Grid.Row="0" Grid.Column="0" Text="Name"/>
-            <Editor Text="{Binding RoomInfo.Name}" Grid.Row="0" Grid.Column="1"
-                Completed="Editor_Completed"
+            <Entry Text="{Binding RoomInfo.Name}" Grid.Row="0" Grid.Column="1"
                 MaxLength="64"
                 Keyboard="Text"
                 IsSpellCheckEnabled="true" 
                 IsTextPredictionEnabled="true"/>
 
             <Label Grid.Row="1" Grid.Column="0" Text="Description"/>
-            <Editor Text="{Binding RoomInfo.Description}" Grid.Row="1" Grid.Column="1"
-                    Completed="Editor_Completed"/>
+            <Entry Text="{Binding RoomInfo.Description}" Grid.Row="1" Grid.Column="1"/>
         </Grid>
 
-        <Label Text="Administration" FontSize="Subtitle"/>
-        <Button Text="Delete" HorizontalOptions="Start" x:Name="Button_Delete" Clicked="Button_Delete_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>

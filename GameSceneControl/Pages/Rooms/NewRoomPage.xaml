@@ -23,14 +23,14 @@
             </Grid.RowDefinitions>
 
             <Label Text="Name" VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="0"/>
-            <Editor x:Name="Name" Placeholder="GameRoom" 
+            <Entry x:Name="Name" Placeholder="GameRoom" 
                 Grid.Column="1" Grid.Row="0"
                 MaxLength="64"
                 Keyboard="Text"
                 TextChanged="Validate_Input" IsSpellCheckEnabled="true" IsTextPredictionEnabled="true" />
 
             <Label Text="Description" VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="1"/>
-            <Editor x:Name="Description" Placeholder="My TTRPD GameRoom"  
+            <Entry x:Name="Description" Placeholder="My TTRPD GameRoom"  
                 Grid.Column="1" Grid.Row="1"
                 Keyboard="Text"
                 MaxLength="256"

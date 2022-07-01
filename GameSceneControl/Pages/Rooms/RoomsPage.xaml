@@ -5,7 +5,7 @@
              xmlns:local="clr-namespace:GameSceneControl.Pages.Rooms"
              x:DataType="local:RoomsInfoModel"
              x:Class="GameSceneControl.Pages.Rooms.RoomsPage"
-             Title="Rooms">
+             Title="Rooms Hello">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100" />
@@ -19,16 +19,33 @@
         <CollectionView ItemsSource="{Binding Rooms}" Grid.Row="1" HorizontalOptions="FillAndExpand">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="rooms:RoomInfo">
-                    <Frame BorderColor="{StaticResource Primary}" HorizontalOptions="FillAndExpand" Padding="5" Margin="5">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Room_Tapped"/>
-                            <ClickGestureRecognizer Clicked="Room_Tapped"/>
-                        </Frame.GestureRecognizers>
-                        <VerticalStackLayout Padding="5" Margin="5">
-                            <Label Text="{Binding Name}" FontSize="Medium"/>
-                            <Label Text="{Binding Description}"/>
-                        </VerticalStackLayout>
-                    </Frame>
+                    <SwipeView >
+                        <SwipeView.LeftItems>
+                            <SwipeItem 
+                                x:Name="ButtonEdit"
+                                Text="Edit" 
+                                BackgroundColor="{AppThemeBinding Default={StaticResource Edit}}"
+                                Invoked="ButtonEdit_Invoked"/>
+                            <SwipeItem 
+                                x:Name="DeleteButton"
+                                Text="Delete" 
+                                BackgroundColor="{AppThemeBinding Default={StaticResource Delete}}"
+                                Invoked="DeleteButton_Invoked"/>
+                        </SwipeView.LeftItems>
+
+                        <!--Content-->
+                        <Frame BorderColor="{StaticResource Dark}" HorizontalOptions="FillAndExpand" Padding="5" Margin="5">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Room_Tapped"/>
+                                <ClickGestureRecognizer Clicked="Room_Tapped"/>
+                            </Frame.GestureRecognizers>
+                            <VerticalStackLayout Padding="5" Margin="5">
+                                <Label Text="{Binding Name}" FontSize="Medium"/>
+                                <Label Text="{Binding Description}"/>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </SwipeView>
+
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
