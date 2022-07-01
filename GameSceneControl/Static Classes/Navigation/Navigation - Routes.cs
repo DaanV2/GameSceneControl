@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-namespace GameSceneControl {
+﻿namespace GameSceneControl {
     ///DOLATER <summary>add description for class: Navigation</summary>
     public static partial class Navigation {
         /// <summary>Performs the navigation to a page</summary>
@@ -19,6 +17,14 @@ namespace GameSceneControl {
         /// <example>../../</example>
         public static void GotoPage(String route, IDictionary<String, Object> parameters) {
             Task request = Shell.Current.GoToAsync(route, parameters);
+            Object data = null;
+
+            _ = Shell.Current.GoToAsync("RoomInfo", new Dictionary<String, Object> {
+                { "Info", data }
+            });
+            _ = Shell.Current.GoToAsync("RoomInfo?Info=Example");
+
+
             HandleRequest(request);
         }
 
@@ -35,18 +41,6 @@ namespace GameSceneControl {
             }
 
             GotoPage(route, dict);
-        }
-
-        /// <summary>Handles possible errors thrown durring the page creation, only done during debug</summary>
-        /// <param name="request"></param>
-        [Conditional("DEBUG")]
-        private static void HandleRequest(Task request) {
-            _ = request.ContinueWith((t) => {
-                if (t.IsFaulted) {
-                    AggregateException ex = t.Exception;
-                    _ = Shell.Current.DisplayAlert("Error", ex.Message + "\n" + ex.StackTrace, "ok");
-                }
-            });
         }
     }
 }
