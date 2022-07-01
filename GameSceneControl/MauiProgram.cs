@@ -15,11 +15,8 @@ public static class MauiProgram {
 
         builder.Services.AddSingleton<RoomsInfoModel>();
         builder.Services.AddSingleton<RoomsPage>();
-        builder.Services.AddSingleton<RoomsInfoModel>();
 
         builder.Services.AddTransient<NewRoomPage>();
-        builder.Services.AddTransient<RoomPage>();
-        builder.Services.AddTransient<RoomPageModel>();
 
         return builder.Build();
     }
