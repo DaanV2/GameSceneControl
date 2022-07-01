@@ -16,16 +16,16 @@ public partial class NewRoomPage : ContentPage {
         RoomInfo Info = this.RoomInfo;
         var Data = new RoomData(Info.ID);
 
-        Navigation.RemovePage(this);
+        this.Navigation.RemovePage(this);
         if (Info.Store() & Data.Store()) {
-            GameSceneControl.Navigation.GotoPage(nameof(RoomPage), ("info", Info));
+            RoomPage.OpenRoomPage(Info);
         }
         else {
             GameSceneControl.Navigation.GotoPage(nameof(RoomsPage));
         }
     }
     private void Button_Cancel_Clicked(Object sender, EventArgs e) {
-        Navigation.RemovePage(this);
+        this.Navigation.RemovePage(this);
         GameSceneControl.Navigation.GotoPage(nameof(RoomsPage));
     }
 
