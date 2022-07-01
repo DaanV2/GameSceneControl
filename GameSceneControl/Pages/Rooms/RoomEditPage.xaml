@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
              xmlns:local="clr-namespace:GameSceneControl.Pages.Rooms"
              x:Class="GameSceneControl.Pages.Rooms.RoomEditPage"             
-             x:DataType="local:RoomPageModel"
+             x:DataType="local:RoomEditPageModel"
              Title="Edit">
     <VerticalStackLayout>
         <Label Text="Info" FontSize="Subtitle"/>

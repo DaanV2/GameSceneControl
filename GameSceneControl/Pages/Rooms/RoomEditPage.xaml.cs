@@ -5,21 +5,21 @@ namespace GameSceneControl.Pages.Rooms;
 
 [QueryProperty("RoomInfo", "info")]
 public partial class RoomEditPage : ContentPage {
-    public RoomEditPage(RoomPageModel Model) {
+    public RoomEditPage(RoomEditPageModel Model) {
         this.InitializeComponent();
         this.BindingContext = Model;
     }
 
 
     public void InfoUpdate() {
-        if (this.BindingContext is not RoomPageModel RPM) return;
+        if (this.BindingContext is not RoomEditPageModel RPM) return;
 
         _ = RPM.RoomInfo.Store();
         RPM.RoomInfo = RPM.RoomInfo;
     }
 
     private async void Button_Delete_Clicked(Object sender, EventArgs e) {
-        if (this.BindingContext is not RoomPageModel RPM) return;
+        if (this.BindingContext is not RoomEditPageModel RPM) return;
 
         Boolean answer = await this.DisplayAlert("Are you sure?", $"You are about to delete the room: {RPM.RoomInfo.Name}", "Yes", "No");
 
